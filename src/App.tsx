@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import tw from "tailwind-styled-components";
 
-function App() {
+const Container = tw.div`
+    flex
+    items-center
+    justify-center
+    flex-col
+    w-full
+    bg-indigo-600
+
+`;
+const BlueContainer = tw(Container)`
+text-blue-300
+`;
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <header className="App-header">hi</header>
+      <div className="h-5 bg-slate-400 w-10"></div>
+      <Container>
+        <span className="text-white">hi</span>
+        <div>hi</div>
+      </Container>
+      <BlueContainer>
+        <span>hihihihi</span>
+      </BlueContainer>
     </div>
   );
-}
+};
 
 export default App;
