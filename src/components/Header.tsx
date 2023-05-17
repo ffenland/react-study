@@ -1,16 +1,20 @@
 import { Link } from "react-router-dom";
+import tw from "tailwind-styled-components";
+
+const Navbar = tw.ul`
+ flex
+ bg-slate-500
+`;
 const Header = () => {
   return (
-    <header>
-      <ul>
-        <li>
-          <Link to={"/"}>HOME</Link>
-        </li>
-        <li>
-          <Link to={"/about"}>ABOUT</Link>
-        </li>
-      </ul>
-    </header>
+    <Navbar>
+      <li>
+        <Link to={"/"}>HOME</Link>
+      </li>
+      <li>
+        <Link to={"/about"}>ABOUT</Link>
+      </li>
+    </Navbar>
   );
 };
 

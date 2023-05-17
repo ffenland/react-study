@@ -5,6 +5,7 @@ import About from "./pages/About";
 import Root from "./Root";
 import NotFound from "./pages/NotFound";
 import ErrorComponent from "./components/ErrorComponent";
+import Nomad from "./pages/nomad/Nomad";
 
 const router = createBrowserRouter([
   {
@@ -13,6 +14,11 @@ const router = createBrowserRouter([
     children: [
       { path: "", element: <Home />, errorElement: <ErrorComponent /> },
       { path: "about", element: <About /> },
+      {
+        path: "nomad",
+        element: <Nomad />,
+        children: [{ path: "movie", element }],
+      },
     ],
     errorElement: <NotFound />,
   },
